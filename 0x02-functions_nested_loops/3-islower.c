@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * _islower - Entry point
@@ -8,15 +8,15 @@ nclude "main.h"
  */
 int _islower(int c)
 {
-	int i = 'a';
+int i = 'a';
 
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		/* refer int c*/
-		if (c == i)
-		{
-			return (1);
-		}
-	}
-	return (0);
+for (i = 'a'; i <= 'z'; i++)
+{
+/* refer int c*/
+if (c == i)
+{
+return (1);
+}
+}
+return (0);
 }
