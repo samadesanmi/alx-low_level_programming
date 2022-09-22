@@ -1,25 +1,19 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * print_number - Prints any integer with putchar
- * @n: Number to prints
+ * rot13 - translates string to ROT13
+ * @s: input string to be translated
  *
- * Return: Nothing
+ * Return: string after conversion of ROT13
  */
-void print_number(int n)
+char *rot13(char *s)
 {
-	unsigned int x;
+	int i, j;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot_it[] =   "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	if (n < 0)
-	{
-		_putchar('-');
-		n *= -1;
-	}
-
-	x = n;
-
-	if (x / 10)
-		print_number(x / 10);
-
-	_putchar(x % 10 + '0');
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; j < 52; j++)
+			if (s[i] == alphabet[j])
+				s[i] = rot_it[j], j = 52;
+	return (s);
 }
