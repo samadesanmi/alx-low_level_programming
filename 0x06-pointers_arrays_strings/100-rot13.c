@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * rot13 - translates string to ROT13
  * @s: input string to be translated
