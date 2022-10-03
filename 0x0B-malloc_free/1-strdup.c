@@ -6,14 +6,14 @@
  * @str: char
  * Return: 0
  */
-char *strdup(char *str)
+char *_strdup(char *str)
 {
 	char *array;
 	int i, r = 0;
 
 	if (str == NULL)
 		return (NULL);
-	i=0;
+	i = 0;
 	while (str[i] != '\0')
 		i++;
 
